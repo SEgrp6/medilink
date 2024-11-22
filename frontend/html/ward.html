@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/frontend/css/ward.css">
+<body>
+        <div class="dashboard">
+            <h1>Doctor Wards</h1>
+            <label for="ward-select">Select Ward:</label>
+            <select id="ward-select">
+                <option value="Ward 1">Ward 1</option>
+                <option value="Ward 2">Ward 2</option>
+                <option value="Ward 3">Ward 3</option>
+            </select>
+            <button id="fetch-patients-btn">View Patients</button>
+            <div id="patients-list">
+                <h2>Patients</h2>
+                <ul id="patients"></ul>
+            </div>
+            <div id="appointment-form" class="hidden">
+                <h2>Schedule Appointment</h2>
+                <form>
+                    <label for="appointment-date">Date:</label>
+                    <input type="datetime-local" id="appointment-date" required>
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" rows="4" cols="50"></textarea>
+                    <button type="button" id="schedule-appointment-btn">Schedule</button>
+                </form>
+            </div>
+        </div>
+        <script src="/frontend/js/wardacces.js"></script>
+    </body>
+    
+</html>
+
+    
+</body>
+</html>

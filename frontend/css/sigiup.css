@@ -1,0 +1,137 @@
+body,h1,p,form,input,button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: rgb(22, 17, 68);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    border: 2px solid rgb(22, 17, 68);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    height: 500px;
+    margin: auto;
+    margin-top: 40px;
+}
+.register-as {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-as form {
+    display: inline-block;
+}
+
+.register-as input[type="button"] {
+    background-color: rgb(22, 17, 68);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.register-as input[type="button"]:hover {
+    background-color: rgba(22, 17, 68, 0.8);
+}
+
+.register-as .login-button {
+    margin-top: 15px;
+}
+
+.register-as .login-button a {
+    text-decoration: none;
+    color: rgb(22, 17, 68);
+    font-weight: bold;
+}
+
+.register-as .login-button a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    display: none;
+}
+
+form h4 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: rgb(22, 17, 68);
+    text-align: center;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(22, 17, 68);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    width: 100%;
+    background-color: rgb(22, 17, 68);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: rgba(22, 17, 68, 0.8);
+}
+
+/* Terms and Conditions */
+.terms-acceptance {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.terms-acceptance label {
+    color: rgb(22, 17, 68);
+}
+
+.terms-acceptance a {
+    color: rgb(22, 17, 68);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.terms-acceptance a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        max-width: 90%;
+    }
+}

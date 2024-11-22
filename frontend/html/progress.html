@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-link</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo"><a href="">
+            <img src="/frontend/images/logo (3).png" alt="Logo Image">
+            <h2>Medi-link</h2>
+        </a></div>
+        <div class="nav-bar">
+            <a href="/frontend/html/landing.html">Home</a>
+            <a href="/frontend/html/about-page.html">About Us</a>
+            <a href="#contact">Contact us </a>
+        </div>
+        <div class="profile"><a href="">
+            <i class='bx bx-user-circle'></i>
+            <h3> Profile</h3>
+        </a></div>
+    </div>
+    <div class="progress-page">
+        <div class="side-bar">
+            <div class="menu-icon"><a href=""><i class='bx bx-menu'></i></a>
+            </div>
+            <div class="menu-content">
+                <a href="/frontend/html/ward-page.html">Wards</a>
+                <a href="/frontend/html/progress.html">Progress</a>
+                <a href="/frontend/html/chat.html">Chats</a>
+            </div>
+
+
+        </div>
+
+        <div class="content-page">
+            <div class="first-bar">
+                <div class="patient-info">
+                    <h2>Patient Name</h2>
+                    <h4>Procedure:</h4>
+                    <p><i>Procedure Name</i></p>
+                    <p>Surgery Date: </p>
+                    <p><i>dd/mm/yy</i></p>
+                </div>
+                <div class="recovery-timeline">
+                    <h2>Recovery Timeline</h2>
+                    <div class="day-label" style="left: 0%;">Day 1 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 10%;"> 10 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 20%;"> 20 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 30%;"> 30 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 40%;"> 40 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 50%;"> 50 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 60%;"> 60 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 70%;"> 70 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 80%;">80 <i class='bx bx-run'></i></div>
+                    <div class="day-label" style="left: 90%;">90 <i class='bx bxs-heart-circle'></i></div>
+                    <div class="progress" id="progress-bar" style="width: 0%;"></div>
+                </div>
+
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button onclick="changeMonth(-1)">&#10094;</button>
+                        <h2 id="month-year"></h2>
+                        <button onclick="changeMonth(1)">&#10095;</button>
+                    </div>
+                    <div class="days-of-week">
+                        <p>Sun</p>
+                        <p>Mon</p>
+                        <p>Tue</p>
+                        <p>Wed</p>
+                        <p>Thu</p>
+                        <p>Fri</p>
+                        <p>Sat</p>
+                    </div>
+                    <div class="days" id="days"></div>
+                </div>
+            </div>
+            <div class="second-bar">
+                <div class="logs">
+                    <div class="daily-logs">
+
+
+                        <h2>Daily/Weekly Logs</h2>
+                        <form>
+                            <p>What Symptoms are you experiencing today?</p>
+
+                            <!-- One-Sided Weakness -->
+                            <div class="symptom-group">
+                                <label>One-Sided Weakness</label>
+                                <div class="choice-group">
+                                    <input type="radio" name="one_sided_weakness" id="one_sided_yes" value="yes">
+                                    <label for="one_sided_yes">Yes</label>
+                                    <input type="radio" name="one_sided_weakness" id="one_sided_no" value="no">
+                                    <label for="one_sided_no">No</label>
+                                </div>
+                            </div>
+
+                            <!-- Redness -->
+                            <div class="symptom-group">
+                                <label>Redness around surgical-site</label>
+                                <div class="choice-group">
+                                    <input type="radio" name="redness" id="redness_yes" value="yes">
+                                    <label for="redness_yes">Yes</label>
+                                    <input type="radio" name="redness" id="redness_no" value="no">
+                                    <label for="redness_no">No</label>
+                                </div>
+                            </div>
+
+                            <!-- Discharge -->
+                            <div class="symptom-group">
+                                <label>Discharge from surgical-site</label>
+                                <div class="choice-group">
+                                    <input type="radio" name="discharge" id="discharge_yes" value="yes">
+                                    <label for="discharge_yes">Yes</label>
+                                    <input type="radio" name="discharge" id="discharge_no" value="no">
+                                    <label for="discharge_no">No</label>
+                                </div>
+
+                               
+                                <div class="choice-group discharge-color">
+                                    <label class="color-label">Color:</label>
+                                    <input type="radio" name="discharge_color" id="discharge_clear" value="clear">
+                                    <label for="discharge_clear">Clear</label>
+                                    <input type="radio" name="discharge_color" id="discharge_pus" value="pus">
+                                    <label for="discharge_pus">Pus</label>
+                                    <input type="radio" name="discharge_color" id="discharge_blood" value="blood">
+                                    <label for="discharge_blood">Blood</label>
+                                </div>
+
+                            </div>
+
+                            <!-- Inflammation -->
+                            <div class="symptom-group">
+                                <label>Inflammation around the surgical site</label>
+                                <div class="choice-group">
+                                    <input type="radio" name="inflammation" id="inflammation_yes" value="yes">
+                                    <label for="inflammation_yes">Yes</label>
+                                    <input type="radio" name="inflammation" id="inflammation_no" value="no">
+                                    <label for="inflammation_no">No</label>
+                                </div>
+                            </div>
+
+                            <!-- Leg Pain -->
+                            <div class="symptom-group">
+                                <label>Leg Pain</label>
+                                <div class="choice-group">
+                                    <input type="radio" name="leg_pain" id="leg_pain_yes" value="yes">
+                                    <label for="leg_pain_yes">Yes</label>
+                                    <input type="radio" name="leg_pain" id="leg_pain_no" value="no">
+                                    <label for="leg_pain_no">No</label>
+                                </div>
+                            </div>
+
+                            <!-- Headaches -->
+                            <div class="symptom-group">
+                                <label>Are you experiencing headaches?
+                                </label>
+                                <div class="choice-group">
+                                    <input type="radio" name="headaches" id="headaches_yes" value="yes">
+                                    <label for="headaches_yes">Yes</label>
+                                    <input type="radio" name="headaches" id="headaches_no" value="no">
+                                    <label for="headaches_no">No</label>
+                                </div>
+                            </div>
+
+                            <!-- General Body Weakness -->
+                            <div class="symptom-group">
+                                <label> Do you have General Body Weakness?</label>
+                                <div class="choice-group">
+                                    <input type="radio" name="body_weakness" id="weakness_none" value="none">
+                                    <label for="weakness_none">None</label>
+                                    <input type="radio" name="body_weakness" id="weakness_mild" value="mild">
+                                    <label for="weakness_mild">Mild</label>
+                                    <input type="radio" name="body_weakness" id="weakness_moderate" value="moderate">
+                                    <label for="weakness_moderate">Moderate</label>
+                                    <input type="radio" name="body_weakness" id="weakness_severe" value="severe">
+                                    <label for="weakness_severe">Severe</label>
+                                </div>
+                            </div>
+
+                            <!-- Pain Level Scale -->
+                            <div class="symptom-group">
+                                <label for="pain-level"> Rate your Pain Level :</label>
+                                <input type="range" id="pain-level" name="pain_level" min="1" max="10" value="1">
+                                <span id="pain-level-value">1</span>
+                            </div>
+
+                            <p>Other Notes:</p>
+                            <textarea id="other-notes" rows="4"
+                                placeholder="Enter any additional notes and provide detailed descriptions..."></textarea>
+                            <div class="submit-button">
+                                <button type="submit">Save Log</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+                <div class="progress-reminders">
+                    <div class="progress-chart ">
+                        <h2>Progress Chart</h2>
+                        <div class="chart-container">
+                            <button id="daily">Daily</button>
+                            <button id="weekly">Weekly</button>
+                            <button id="monthly">Monthly</button>
+
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="reminders">
+                        <h2>Reminders & Alerts</h2>
+                        <div class="reminder">
+                            <p>Upcoming Check-up: February 14, 2024 at 10:00 AM</p>
+                        </div>
+                        <div class="reminder">
+                            <p>Medication Alert: Next dose at 2:00 PM</p>
+                        </div>
+                        <div class="set-reminder">
+                            <label for="reminder">Set New Reminder</label>
+                            <input type="datetime-local" id="reminder-input" title="Set a reminder" placeholder="Select date and time">
+                            <button onclick="addReminder()"><i class='bx bx-plus' style='color:#ffffff'></i> Set
+                                Check-up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <a href=""><i class='bx bxs-phone'></i> 0798765432</a>
+            <a href=""><i class='bx bxl-gmail' style='color:#ffffff'></i> info@medilink.org</a>
+            <a href=""><i class='bx bx-current-location' style='color:#ffffff'></i> Ole-Sangale link rd</a>
+        </div>
+        <div class="copyright">
+            <h2>Copyright</h2>
+            <p>&copy; 2024 Medi-link. All rights reserved.</p>
+        </div>
+        <div class="social-links">
+            <a href=""><i class='bx bxl-facebook'></i> Facebook</a>
+            <a href=""><i class='bx bxl-twitter'></i> Twitter</a>
+            <a href=""><i class='bx bxl-instagram'></i> Instagram</a>
+            <a href=""><i class='bx bxl-linkedin'></i> Linkedin</a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/frontend/js/script.js"></script>
+
+</body>
+
+</html>

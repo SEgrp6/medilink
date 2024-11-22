@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/frontend/css/sigiup.css">
+<body>
+    <div class="register-as">
+       <!--- <h1>Register</h1> -->
+        <form id="initialForm">
+                <h1>Register</h1>
+                <input type="button" id="doctor-button" name="role" value="Register as Doctor" required> 
+                <input type="button" id="patient-button" name="role" value="Register as Patient" required> 
+                <div class="login-button">
+                <p>Already have an account? <a class="login-button" href="/frontend/html/signin.html">Login</a>
+                </p>
+                </div>
+        </form>
+    </div>
+    <div class="doctorsignup">
+        <form id="signupForm1" action="">
+            <h4>Doctor Registration</h4> 
+            <input type="text" id="doctorName" placeholder="Doctor Name" required />
+            <input type="text" id="specialization" placeholder="Specialization" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <input type="text" id="hospitalName" placeholder="Hospital Name" required />
+            <input type="text" id="hospitalCode" placeholder="Hospital Code" required />
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div class="patients-signup">
+        <form id="signupForm3" action="">
+            <input type="text" id="patientName" placeholder="Full Name" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <input type="text" id="wardcode" placeholder="Ward-Code" required>
+            <div class="terms-acceptance">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the <a href="#" id="viewTerms">terms and conditions</a></label>
+            </div>
+            <button type="submit" id="authButton">Sign-Up</button>
+        </form>
+    </div>
+    <script src="/frontend/js/signup.js"></script>
+</body>
+</html>

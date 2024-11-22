@@ -1,0 +1,245 @@
+/* styles.css */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: rgba(165, 169, 184, 0.904);
+    height: 12vh;
+}
+.header .logo{
+    display:flex;
+    text-decoration: none;
+    padding:20px;
+    
+}
+.header .logo a{
+   text-decoration:none;
+   display: flex;
+}
+.header .logo a img{
+    width:90px;
+    height:90px;
+    border-radius:40px;
+    padding:5px;
+}
+.header .logo a h2{
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(22, 17, 68);
+}
+
+.header .nav-bar{
+    display: flex;
+    justify-content: space-between;
+    /* padding:20px;
+    margin:10px; */
+
+}
+.header .nav-bar a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.header .profile {
+    display: flex;
+    align-items: center; /* Center icon and text vertically */
+    padding: 20px;
+}
+
+.header .profile a {
+    display: flex;
+    align-items: center; /* Align icon and text in the middle */
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap: 10px; /* Space between icon and text */
+}
+
+.header .profile a i {
+    font-size: 60px; /* Adjust icon size */
+    color: black;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: rgb(22, 17, 68);
+    height: 40vh;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 10px;
+    justify-content: space-around;
+}
+footer .contact a{
+    text-decoration: none;
+    color: white;
+}
+footer .copy-right{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 10px;
+}
+footer .social-links{
+    display: flex;
+    padding: 40px;
+    margin: 10px;
+    flex-direction: column;
+}
+footer .social-links a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.headerPic {
+    position: relative;
+    height: 520px;
+    background: url('https://media.istockphoto.com/id/855467422/photo/in-it-to-saves-lives-together.jpg?s=612x612&w=0&k=20&c=bD-FIU33b7EojEKet2ry7KefEEiVpCgnqRoSDHH-mOc=') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#darken {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+#heading {
+    width: 100%;
+    background-color: #00000079;
+    filter: brightness(1);
+}
+
+
+
+.recovery-destinations, .top-rated {
+    padding: 20px;
+}
+
+.destinations-grid, .plans-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.destination, .plan {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dcdcdc;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.destination .img, .plan .img {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.caption {
+    padding:8px;
+    width:100%;
+}
+
+.caption h4 {
+
+    margin:0;
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+}
+
+.header .nav-bar{ 
+    position: relative;
+    padding: 20px 1em;
+}
+
+.header .nav-bar a{
+
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #000;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+    
+
+}
+
+.header .nav-bar a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #000;
+    transition: 0.5s ease;
+}
+      
+.header .nav-bar a:hover {
+    color: #F0F8FF;
+    transition-delay: 0.5s;
+}
+      
+.header .nav-bar a:hover::before {
+        width: 100%;
+      }
+      
+.header .nav-bar a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        background-color: rgb(22, 17, 68);
+        transition: 0.4s ease;
+        z-index: -1;
+      }
+      
+.header .nav-bar a:hover::after {
+        height: 100%;
+        transition-delay: 0.4s;
+        color: #fff;
+      }

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediLink - Chat</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/frontend/css/chat.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo">
+            <a href="">
+                <img src="/frontend/images/logo (3).png" alt="Logo Image">
+                <h2>MediLink</h2>
+            </a>
+        </div>
+        <div class="nav-bar">
+            <a href="/frontend/html/landing.html">Home</a>
+            <a href="/frontend/html/about-page.html">About Us</a>
+            
+            <a href="#contact-info">Contact</a>
+        </div>
+        <div class="profile">
+            <a href="">
+                <i class='bx bx-user-circle'></i>
+                <h3>Profile</h3>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="chat-page">
+        <!-- Sidebar Section -->
+        <div class="side-bar">
+            <div class="menu-icon">
+                <a href=""><i class='bx bx-menu'></i></a>
+            </div>
+            <div class="menu-content">
+                <a href="">Wards</a>
+                <a href="/frontend/html/progress.html">Progress</a>
+                <a href="/frontend/html/chat.html">Chats</a>
+                
+            </div>
+        </div>
+
+        <!-- Chat Content Section -->
+        <div class="content-page">
+            <!-- Chat Sidebar -->
+            <div class="chat-sidebar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Contacts...">
+                </div>
+                <div class="contact-list">
+                    <div class="contact">
+                        <img src="/frontend/images/img1.jpg" alt="Doctor Image">
+                        <div class="contact-info">
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>Online</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="/frontend/images/img2.jpg" alt="Doctor Image">
+                        <div class="contact-info">
+                            <h4>Dr. Michael Lee</h4>
+                            <p>Last seen 2h ago</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="/frontend/images/img3.jpg" alt="Doctor Image">
+                        <div class="contact-info">
+                            <h4>Dr. Emily Davis</h4>
+                            <p>Typing...</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="/frontend/images/img4.jpg" alt="Doctor Image">
+                        <div class="contact-info">
+                            <h4>Dr. John Smith</h4>
+                            <p>Available</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="/frontend/images/img2.jpg" alt="Doctor Image">
+                        <div class="contact-info">
+                            <h4>Dr. Anna White</h4>
+                            <p>Last seen 5m ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Window -->
+            <div class="chat-window">
+                <div class="chat-header">
+                    <img src="/frontend/images/img4.jpg" alt="Doctor Image">
+                    <div class="chat-header-info">
+                        <h4>Dr. Sarah Johnson</h4>
+                        <p>Online</p>
+                    </div>
+                </div>
+                <div class="messages-container" id="messages-container">
+                    <!-- Example Messages -->
+                    <div class="message received">
+                        <p>Doctor: How are you feeling today?</p>
+                    </div>
+                    <div class="message sent">
+                        <p>Patient: I'm feeling a bit better, thank you.</p>
+                    </div>
+                    <div class="message received">
+                        <p>Doctor: That's great to hear! Make sure to rest and follow the recovery plan.</p>
+                    </div>
+                    <div class="message sent">
+                        <p>Patient: Will do, Doctor. Thank you!</p>
+                    </div>
+                </div>
+                <div class="message-input">
+                    <input type="text" id="chat-message" placeholder="Type your message here...">
+                    <button onclick="sendMessage()" title="Send Message"><i class='bx bx-send'></i></button>
+                </div>
+                <div class="emoji-picker">
+                    <button onclick="toggleEmojiPicker()"><i class='bx bx-smile'></i> Emojis</button>
+                    <div id="emoji-container" style="display: none;">
+                        <span onclick="addEmoji('😀')">😀</span>
+                        <span onclick="addEmoji('😂')">😂</span>
+                        <span onclick="addEmoji('😍')">😍</span>
+                        <span onclick="addEmoji('😢')">😢</span>
+                        <span onclick="addEmoji('😡')">😡</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div id="contact-info" class="contact">
+            <h2>Contact Us</h2>
+            <a href=""><i class='bx bxs-phone'></i> 0798765432</a>
+            <a href=""><i class='bx bxl-gmail email-icon'></i> info@medilink.org</a>
+            <a href=""><i class='bx bx-current-location location-icon'></i> Ole-Sangale link rd</a>
+        </div>
+        <div class="copyright">
+            <h2>Copyright</h2>
+            <p>&copy; 2024 MediLink. All rights reserved.</p>
+        </div>
+        <div class="social-links">
+            <a href=""><i class='bx bxl-facebook'></i> Facebook</a>
+            <a href=""><i class='bx bxl-twitter'></i> Twitter</a>
+            <a href=""><i class='bx bxl-instagram'></i> Instagram</a>
+            <a href=""><i class='bx bxl-linkedin'></i> LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="/frontend/js/chat.js"></script>
+</body>
+</html>

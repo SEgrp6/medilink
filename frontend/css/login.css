@@ -1,0 +1,103 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #161144;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 350px;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: whitesmoke;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #161144;
+        }
+
+        #formTitle {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            background-color: white;
+            color: #161144;
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid #161144;
+            box-shadow: 0 0 5px rgba(22, 17, 68, 0.5);
+        }
+
+        .forgot-password {
+            text-align: right;
+            display: block;
+            margin-top: -5px;
+            font-size: 0.9rem;
+            color: #161144;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            color: #161144;
+            text-decoration: underline;
+        }
+
+        .login-button {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .login-button a {
+            text-decoration: none;
+            background-color: #161144;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button a:hover {
+            background-color: #131137;
+            
+        }
+
+        .toggle {
+            text-align: center;
+        }
+
+        .toggle a {
+            color: #161144;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .toggle a:hover {
+            color: white;
+        }

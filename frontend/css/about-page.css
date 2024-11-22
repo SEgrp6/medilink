@@ -1,0 +1,204 @@
+styles.css
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Slideshow Background */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: url('/Resources/images/doctor.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: slideshow 20s infinite;
+    position: relative;
+}
+
+/* Slideshow Animation */
+@keyframes slideshow {
+    0% {
+        background-image: url('/Resources/images/hosp.jpg');
+    }
+    25% {
+        background-image: url('/Resources/images/hosp2.jpg');
+    }
+    50% {
+        background-image: url('/Resources/images/emergency.jpg');
+    }
+    75% {
+        background-image: url('Resources/images/doctor.jpg');
+    }
+    100% {
+        background-image: url('/Resources/images/istockphoto-855467422-612x612.jpg');
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(165, 169, 184, 0.904);
+    height: 12vh;
+}
+
+.header .logo {
+    display: flex;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.header .logo a {
+    text-decoration: none;
+    display: flex;
+}
+
+.header .logo a img {
+    width: 90px;
+    height: 90px;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+.header .logo a h2 {
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+    font-family: Cambria, serif;
+    color: rgb(22, 17, 68);
+}
+
+.header .nav-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .nav-bar a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.header .profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.header .profile a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', sans-serif;
+    gap: 10px;
+}
+
+.header .profile a i {
+    font-size: 60px;
+    color: black;
+}
+
+/* About Page Content */
+.page-header, .content, .team {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.page-header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: #ffffff;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Team Section */
+.team {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.team-member {
+    flex: 1 1 200px;
+    max-width: 220px;
+    padding: 1rem;
+    background: rgba(240, 248, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(22, 17, 68);
+    height: 40vh;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+footer .contact, footer .social-links, footer .copyright {
+    padding: 40px;
+}
+
+footer .contact a, footer .social-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}

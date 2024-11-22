@@ -1,0 +1,108 @@
+body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: #161144;
+        padding: 20px;
+    }
+
+    .dashboard {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        color: #161144;;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .dashboard h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: white;
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    select,
+    input,
+    textarea,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    select,
+    input,
+    textarea {
+        background-color: white;
+        color: #161144;
+    }
+
+    button {
+        background-color: #161144;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: none;
+    }
+
+    button:hover {
+        background-color: #131137;
+    }
+
+    #patients-list {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: white;
+        color: #161144;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #patients-list h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    #patients-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #patients-list li {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #appointment-form {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: white;
+        color: #161144;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #appointment-form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hidden {
+        display: none;
+    }

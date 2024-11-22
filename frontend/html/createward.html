@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/frontend/css/createward.css">
+<body>
+    <div class="new-ward">
+        <h1>Create New Ward</h1>
+        <form id="wardForm">
+            <label for="ward_name">Ward Name:</label>
+            <input type="text" id="ward_name" name="ward_name" required><br>
+            <label for="ward_code">Ward Code:</label>
+            <input type="text" id="ward_code" name="ward_code" required><br>
+            <label for="hospital_id">Hospital ID:</label>
+            <input type="text" id="hospital_id" title="Hospital ID"><br>
+            <label for="doctor_id">Doctor ID:</label>
+            <input type="text" id="doctor_id"  title="Doctor ID"><br>    
+            <button type="submit">Create Ward</button>
+        </form>
+    
+        <div id="message"></div>
+    </div>
+    <script src="/frontend/js/ward.js"></script>
+</body>
+</html>

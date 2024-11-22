@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('path/to/your/background-image.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-left: 400px;
+}
+
+.container {
+    background-color: rgba(165, 169, 184, 0.904);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    /* Set a fixed width for the container */
+    text-align: center;
+}
+
+h1 {
+    color: rgb(22, 17, 68);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border:#161144 ;
+}
+
+label {
+    margin: 10px 0;
+    font-size: 16px;
+    color: rgb(22, 17, 68);
+}
+
+input[type="radio"] {
+    display: none;
+    /* Hide the default radio buttons */
+}
+
+input[type="radio"]+label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+input[type="radio"]+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(22, 17, 68);
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="radio"]:checked+label::before {
+    background-color: rgb(22, 17, 68);
+}
+
+button {
+    background-color: rgb(22, 17, 68);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: rgba(22, 17, 68, 0.8);
+}
